@@ -8,6 +8,7 @@ import { WishListService } from './services/wish-list.service';
 
 //pipes
 import { PlaceHolderPipe } from './pipes/placeholder.pipe';
+import { PendingsPipe } from './pipes/pendings.pipes';
 
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -17,15 +18,18 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { PendingsComponent } from '../pages/pendings/pendings.component';
 import { FinishedComponent } from '../pages/finished/finished.component';
 import { AddComponent } from '../pages/add/add.component';
+import { DetailComponent } from '../pages/detail/detail.component';
 
 @NgModule({
   declarations: [
     MyApp,
     PlaceHolderPipe,
+    PendingsPipe,
     TabsPage,
     PendingsComponent,
     FinishedComponent,
-    AddComponent
+    AddComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,8 @@ import { AddComponent } from '../pages/add/add.component';
     TabsPage,
     PendingsComponent,
     FinishedComponent,
-    AddComponent
+    AddComponent,
+    DetailComponent
   ],
   providers: [
     StatusBar,
