@@ -11,7 +11,7 @@ import { List } from '../classes/lists';
   pure: false
 })
 export class PendingsPipe implements PipeTransform {
-  transform(lists: List[], isCompleted: boolean = true): List[] {
+  transform(lists: List[], isCompleted: boolean = false): List[] {
     let newList:List[] = [];
 
     for(let list of lists) {

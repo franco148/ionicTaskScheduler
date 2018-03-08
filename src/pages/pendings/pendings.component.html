@@ -11,6 +11,15 @@
     </li>
   </h1> -->
 
+  <ion-grid *ngIf="(_wishList.lists | pendings).length === 0">
+    <ion-row>
+      <ion-col class="text-center empty-box">
+        <ion-icon class="empty-icon" ios="ios-sunny" md="md-sunny"></ion-icon>
+        <p>There is not any list</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
   <ion-card *ngFor="let list of _wishList.lists | pendings; let idx=index">
     <ion-item color="dark" (click)="seeDetail(list, idx)">
       <h2>{{ list.name }}</h2>
