@@ -28,4 +28,12 @@ export class AddComponent implements OnInit {
     this.items.push(item);
     this.itemName = "";
   }
+
+  removeItem(index:number) {
+    if(index < 0) {
+      return;
+    }
+    
+    this.items.splice(index, 1);
+  }
 }

@@ -24,7 +24,7 @@
   </ion-card>
 
   <!-- Card Items -->
-  <ion-card>
+  <ion-card *ngIf="items.length > 0">
     <ion-card-header>
       <h3>Added Items</h3>
     </ion-card-header>
@@ -34,7 +34,7 @@
           <button ion-button color="dark" clear>
             {{ item.name }}
           </button>
-          <button ion-button outline item-right color="danger">
+          <button (click)="removeItem(idx)" ion-button outline item-right color="danger">
             <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
             remove item ({{idx}})
           </button>
