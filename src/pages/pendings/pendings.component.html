@@ -20,7 +20,7 @@
     </ion-item>
 
     <ion-list>
-      <ion-item (click)="seeDetail(list, idx)" *ngFor="let item of _wishList.lists | slice:0:2">
+      <ion-item (click)="seeDetail(list, idx)" *ngFor="let item of list.items | slice:0:2">
         <ion-icon *ngIf="!item.completed" ios="ios-square-outline" md="ios-square-outline"></ion-icon>
         <ion-icon *ngIf="item.completed" ios="ios-checkbox-outline" md="ios-checkbox-outline"></ion-icon>
         {{ item.name }}

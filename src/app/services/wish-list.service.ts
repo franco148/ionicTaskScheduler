@@ -25,4 +25,11 @@ export class WishListService {
     this.lists.push(list);
     this.updateData();
   }
+
+  removeList(list:List) {
+    let index:number = this.lists.map((item)=>{return item.name}).indexOf(list.name);    
+    this.lists.splice(index, 1);
+
+    this.updateData();
+  }
 }
