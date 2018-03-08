@@ -17,6 +17,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { PendingsComponent } from '../pages/pendings/pendings.component';
 import { FinishedComponent } from '../pages/finished/finished.component';
 import { AddComponent } from '../pages/add/add.component';
+import { DetailComponent } from '../pages/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AddComponent } from '../pages/add/add.component';
     TabsPage,
     PendingsComponent,
     FinishedComponent,
-    AddComponent
+    AddComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { AddComponent } from '../pages/add/add.component';
     TabsPage,
     PendingsComponent,
     FinishedComponent,
-    AddComponent
+    AddComponent,
+    DetailComponent
   ],
   providers: [
     StatusBar,

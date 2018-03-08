@@ -11,24 +11,25 @@
     </li>
   </h1> -->
 
-  <ion-card *ngFor="let list of _wishList.lists">
-    <ion-item>
+  <ion-card *ngFor="let list of _wishList.lists; let idx=index">
+    <ion-item color="dark" (click)="seeDetail(list, idx)">
       <h2>{{ list.name }}</h2>
+      <ion-note item-right>
+        {{ list.items.length }} items
+      </ion-note>
     </ion-item>
 
     <ion-list>
-      <ion-item>
-        <ion-icon ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle"></ion-icon>
-        Tetris
+      <ion-item (click)="seeDetail(list, idx)" *ngFor="let item of _wishList.lists | slice:0:2">
+        <ion-icon *ngIf="!item.completed" ios="ios-square-outline" md="ios-square-outline"></ion-icon>
+        <ion-icon *ngIf="item.completed" ios="ios-checkbox-outline" md="ios-checkbox-outline"></ion-icon>
+        {{ item.name }}
       </ion-item>
-      <ion-item>
-        <ion-icon ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle"></ion-icon>
-        Tetris
+
+      <ion-item class="text-center" *ngIf="list.items.length > 2">
+        <ion-icon color="primary" ios="ios-arrow-dropdown" md="md-arrow-dropdown"></ion-icon>
       </ion-item>
-      <ion-item>
-        <ion-icon ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle"></ion-icon>
-        Tetris
-      </ion-item>
+
     </ion-list>
   </ion-card>
 
