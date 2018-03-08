@@ -8,6 +8,7 @@ import { WishListService } from './services/wish-list.service';
 
 //pipes
 import { PlaceHolderPipe } from './pipes/placeholder.pipe';
+import { PendingsPipe } from './pipes/pendings.pipes';
 
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -23,6 +24,7 @@ import { DetailComponent } from '../pages/detail/detail.component';
   declarations: [
     MyApp,
     PlaceHolderPipe,
+    PendingsPipe,
     TabsPage,
     PendingsComponent,
     FinishedComponent,

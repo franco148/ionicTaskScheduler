@@ -28,6 +28,15 @@ export class DetailComponent implements OnInit {
   udpate(item:ListItem) {
     item.completed = !item.completed;
 
+    let areListItemsFinished = true;
+    for(let item of this.list.items) {
+      if(!item.completed) {
+        areListItemsFinished = false;
+        break;
+      }
+    }
+
+    this.list.completed = areListItemsFinished;
     this._wishService.updateData();
   }
 

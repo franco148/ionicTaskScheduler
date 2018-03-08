@@ -11,7 +11,7 @@
     </li>
   </h1> -->
 
-  <ion-card *ngFor="let list of _wishList.lists; let idx=index">
+  <ion-card *ngFor="let list of _wishList.lists | pendings; let idx=index">
     <ion-item color="dark" (click)="seeDetail(list, idx)">
       <h2>{{ list.name }}</h2>
       <ion-note item-right>
