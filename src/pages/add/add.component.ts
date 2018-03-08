@@ -57,7 +57,8 @@ export class AddComponent implements OnInit {
     let list = new List(this.listName);
     list.items = this.items;
 
-    this._wishService.lists.push(list);
+    //this._wishService.lists.push(list);
+    this._wishService.addNewList(list);
 
     this.navControler.pop();
   }
