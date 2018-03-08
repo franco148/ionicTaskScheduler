@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
-import { HomePage } from '../home/home';
+import { PendingsComponent } from '../pendings/pendings.component';
+import { FinishedComponent } from '../finished/finished.component';
 
 @Component({
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
 
-  tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = ContactPage;
+//Lets changes the first component order.
+  // tab1Root = HomePage;
+  tab1Root = PendingsComponent;
+  tab2Root = FinishedComponent;
 
   constructor() {
 
